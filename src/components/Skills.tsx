@@ -2,22 +2,61 @@ import React from 'react';
 
 export default function Skills() {
   const skillCategories = {
-    'Programming Languages': ['Java'],
-    'Industry Sector Knowledge': ['Logistics', 'Banking'],
-    'Web Technologies': ['Angular', 'HTML', 'JavaScript', 'CSS'],
-    'Frameworks/Platforms': [
-      'Adobe Experience Manager',
-      'Adobe Analytics',
-      'Spring',
-      'Struts',
-      'myBatis',
+    'Programming Languages': [
+      'Java',
+      'Kotlin',
+      'JavaScript/TypeScript'
+    ],
+    'Cloud & DevOps': [
+      'AWS',
+      'Docker',
+      'Kubernetes',
+      'CircleCI',
+      'Harness',
+      'Mesosphere DCOS',
+      'Marathon Container Orchestration'
+    ],
+    'Frameworks & Libraries': [
+      'Spring Boot',
       'Spring Data JPA',
-      'ASP .NET',
-      'WPF',
-      'Entity Framework',
-      'Junit',
+      'Angular',
+      'Struts',
+      'myBatis'
+    ],
+    'Messaging & Integration': [
+      'Apache Kafka',
       'RabbitMQ',
-      'Docker'
+      'Twilio',
+      'WSO2 API Management',
+      'WSO2 Identity Server'
+    ],
+    'Databases & Caching': [
+      'Oracle',
+      'PostgreSQL',
+      'Redis'
+    ],
+    'Application Servers': [
+      'Apache Tomcat',
+      'IBM WebSphere'
+    ],
+    'Adobe Experience Cloud': [
+      'Adobe Experience Manager (AEM)',
+      'Adobe Analytics (AA)'
+    ],
+    'Testing & Quality': [
+      'Pact Contract Testing',
+      'JUnit',
+      'Integration Testing'
+    ],
+    'E-commerce & Integration': [
+      'Bazaar Voice',
+      'Price Spider'
+    ],
+    'Methodologies': [
+      'Agile',
+      'Microservices Architecture',
+      'DevOps',
+      'CI/CD'
     ]
   };
 
@@ -28,8 +67,8 @@ export default function Skills() {
         <table className="w-full">
           <thead>
             <tr className="bg-gray-50">
-              <th className="text-left py-3 px-4 font-medium text-primary-800">Category</th>
-              <th className="text-left py-3 px-4 font-medium text-primary-800">Skills</th>
+              <th className="text-left py-3 px-4 font-medium text-gray-800">Category</th>
+              <th className="text-left py-3 px-4 font-medium text-gray-800">Skills</th>
             </tr>
           </thead>
           <tbody>
@@ -40,15 +79,15 @@ export default function Skills() {
                   index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                 }`}
               >
-                <td className="py-4 px-4 font-medium text-primary-800 align-top">{category}</td>
+                <td className="py-4 px-4 font-medium text-gray-800 align-top whitespace-nowrap">{category}</td>
                 <td className="py-4 px-4">
-                  <div className="flex flex-wrap">
+                  <div className="text-gray-700">
                     {skills.map((skill, skillIndex) => (
                       <React.Fragment key={skillIndex}>
-                        <span className="text-gray-700 hover:text-primary-800 transition-colors duration-200">
+                        <span className="hover:text-gray-900 transition-colors duration-200">
                           {skill}
                         </span>
-                        {skillIndex < skills.length - 1 && <span className="text-gray-400">,&nbsp;</span>}
+                        {skillIndex < skills.length - 1 && <span className="text-gray-400">, </span>}
                       </React.Fragment>
                     ))}
                   </div>
