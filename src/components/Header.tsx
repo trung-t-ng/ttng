@@ -10,8 +10,8 @@ export default function Header() {
           
           <div className="text-gray-700 max-w-2xl text-justify">
             <p itemProp="description">
-              Trung Nguyen is a polyglot Software Engineer with experience in both frontend and backend technologies with Java, React, Angular, and AEM. 
-              Besides his strong technical knowledge, he is a facilitator of agile principles in development teams.
+              A seasoned Expert Software Engineer with extensive experience in full-stack development, specializing in Java, React, Angular, and Adobe Experience Manager. 
+              Proven track record in leading technical teams and implementing agile methodologies to drive project success and deliver high-quality software solutions.
             </p>
           </div>
         </div>

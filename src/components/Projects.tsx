@@ -4,41 +4,42 @@ export default function Projects() {
   const projects = [
     {
       title: 'Digital Banking Platform',
-      description: 'The first of a new breed of banks in Singapore – digitally native and focused on delivering a delightful customer experience. Working in a fast-paced and collaborative environment to solve new and interesting challenges each day.',
+      description: 'Led the development of a next-generation digital banking platform in Singapore, delivering innovative financial solutions through a cloud-native architecture and microservices approach.',
       highlights: [
-        'Building microservice-based solutions using Kotlin/Java, Kafka, and Postgres in a container-focused cloud architecture.',
-        'Being the technical lead of Customer Service Domain in the banking platform.',
-        'Working with the Architect teams to discuss solution designs and testing deliverables.'
+        'Designed and implemented scalable microservices architecture using Kotlin/Java, Kafka, and Postgres.',
+        'Spearheaded the Customer Service Domain, establishing technical standards and best practices.',
+        'Collaborated with enterprise architects to define and implement comprehensive solution designs and testing frameworks.'
       ]
     },
     {
       title: 'Adobe Service Offering',
-      description: 'Collaborate with a full-service digital marketing agency. Our client uses Adobe solution suite including AEM, Target, Analytics, Launch, and Campaign.',
+      description: 'Partnered with a leading digital marketing agency to implement and optimize their Adobe Experience Cloud ecosystem, enhancing their digital presence and marketing capabilities.',
       highlights: [
-        'Work as an Adobe Experience Manager & Adobe Analytics Full Stack Engineer.'
+        'Architected and implemented Adobe Experience Manager solutions, integrating with Analytics, Target, and Campaign platforms.',
+        'Optimized digital marketing workflows and content management processes.'
       ]
     },
     {
       title: 'Port Management System Modernization',
-      description: 'Modernize and upgrade the existing system to enable a more agile, robust, and future-ready system with enhanced UI and UX to improve productivity and user-friendliness.',
+      description: 'Transformed legacy port management systems into a modern, scalable platform with enhanced user experience and operational efficiency.',
       highlights: [
-        'Contribute to Solution Architecture Design.',
-        'Develop frontend framework by Angular, leading a frontend development team and work as a Java backend developer.',
-        'Develop custom WSO2 IS user store to support single sign-on.',
-        'Dockerize application.',
-        "Support customer's technical user to UAT new system."
+        'Designed and implemented a modern solution architecture for port operations.',
+        'Led frontend development using Angular, establishing best practices and development standards.',
+        'Implemented custom WSO2 Identity Server integration for enterprise-grade authentication.',
+        'Containerized application deployment using Docker for improved scalability and maintainability.',
+        'Facilitated user acceptance testing and provided comprehensive technical support.'
       ]
     },
     {
       title: 'Total Logistics Management Systems',
-      description: 'Develop and maintain Logistics Management systems, Transportation Management systems, and Warehouse Management systems.',
+      description: 'Developed and maintained enterprise-grade logistics management systems, integrating transportation and warehouse management solutions.',
       highlights: [
-        'Configuration Controller, set up and manage web application server and database server on Red Hat Enterprise Linux.',
-        'System integrator between logistics system.',
-        'Leading a development team, focused on the understanding of the project architecture, general team issues, and technical matters.',
-        'Develop application for a handy device which working in Warehouse Management system.',
-        'Develop a web application to manage the logistics system and the transportation system.',
-        'Create detailed design, coding, unit test cases.'
+        'Architected and maintained enterprise infrastructure on Red Hat Enterprise Linux.',
+        'Designed and implemented system integration solutions for logistics operations.',
+        'Led development teams, establishing technical standards and best practices.',
+        'Developed mobile solutions for warehouse management operations.',
+        'Implemented web-based logistics and transportation management platforms.',
+        'Established comprehensive development standards and quality assurance processes.'
       ]
     }
   ];

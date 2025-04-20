@@ -15,9 +15,9 @@ export default function Experience() {
             <span className="text-gray-500 text-sm mt-2 md:mt-0">August 2021 — Present</span>
           </div>
           <ul className="list-disc list-outside text-gray-700 space-y-1.5 ml-4">
-            <li>Building microservice-based solutions using Kotlin/Java, Kafka, and Postgres in a container-focused cloud architecture.</li>
-            <li>Being the technical lead of Customer Service Domain in the banking platform.</li>
-            <li>Working with the Architect teams to discuss solution designs and testing deliverables.</li>
+            <li>Architected and implemented microservice-based solutions using Kotlin/Java, Kafka, and Postgres within a cloud-native container architecture.</li>
+            <li>Led the Customer Service Domain as Technical Lead, driving architectural decisions and ensuring high-quality deliverables.</li>
+            <li>Collaborated with Architecture teams to define solution designs and establish comprehensive testing strategies.</li>
           </ul>
         </div>
 
@@ -30,12 +30,12 @@ export default function Experience() {
             <span className="text-gray-500 text-sm mt-2 md:mt-0">June 2015 — August 2021</span>
           </div>
           <ul className="list-disc list-outside text-gray-700 space-y-1.5 ml-4">
-            <li>Work as an Adobe Experience Manager & Adobe Analytics Full Stack Engineer.</li>
-            <li>Contribute to Solution Architecture Design for port management system modernization.</li>
-            <li>Develop frontend framework using Angular, leading a frontend development team.</li>
-            <li>Configuration Controller, managing web application and database servers on Red Hat Enterprise Linux.</li>
-            <li>System integrator between logistics systems, leading development teams.</li>
-            <li>Create detailed design, coding, and unit test cases.</li>
+            <li>Spearheaded Adobe Experience Manager & Adobe Analytics implementations as a Full Stack Engineer.</li>
+            <li>Designed and implemented solution architecture for port management system modernization.</li>
+            <li>Led frontend development initiatives using Angular, managing a team of developers.</li>
+            <li>Architected and maintained web application and database infrastructure on Red Hat Enterprise Linux.</li>
+            <li>Orchestrated system integration between logistics platforms, leading cross-functional development teams.</li>
+            <li>Established comprehensive development standards, including detailed design documentation and test-driven development practices.</li>
           </ul>
         </div>
       </div>
