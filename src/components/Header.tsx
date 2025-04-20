@@ -33,6 +33,11 @@ export default function Header() {
                   +84 989 648 549
                 </a>
               </p>
+              <p className="text-gray-600">
+                <a href="https://www.linkedin.com/in/trung-t-nguyen/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-800 transition-colors">
+                  LinkedIn Profile
+                </a>
+              </p>
             </div>
           </div>
         </div>
