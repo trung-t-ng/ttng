@@ -6,7 +6,7 @@ export default function Header() {
       <div className="flex items-start gap-12">
         <div className="flex-1">
           <h1 className="text-4xl font-light mb-2" itemProp="name">Trung Nguyen</h1>
-          <h2 className="text-xl text-gray-600 mb-6" itemProp="jobTitle">Expert Software Engineer</h2>
+          <h2 className="text-xl text-gray-600 mb-6" itemProp="jobTitle">Software Engineer</h2>
           
           <div className="text-gray-700 max-w-2xl text-justify">
             <p itemProp="description">

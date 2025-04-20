@@ -10,7 +10,7 @@ export default function Experience() {
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
             <div>
               <h3 className="text-lg font-medium">Software Engineer</h3>
-              <p className="text-gray-600 mt-1">Zuhlke Engineering Vietnam Ltd</p>
+              <p className="text-gray-600 mt-1">Zuehlke Engineering Vietnam</p>
             </div>
             <span className="text-gray-500 text-sm mt-2 md:mt-0">August 2021 — Present</span>
           </div>
