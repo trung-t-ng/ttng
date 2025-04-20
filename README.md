@@ -24,7 +24,7 @@ A modern, responsive resume website built with Next.js and Tailwind CSS. This pr
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/trung-t-ng/ttng-resume-made-by-ai.git
+git clone https://github.com/trung-t-ng/ttng.git
 ```
 
 2. Install dependencies:
