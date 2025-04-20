@@ -9,33 +9,33 @@ export default function Experience() {
         <div className="p-5 bg-gray-50 rounded-lg">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
             <div>
-              <h3 className="text-lg font-medium">Expert Software Engineer</h3>
+              <h3 className="text-lg font-medium">Software Engineer</h3>
               <p className="text-gray-600 mt-1">Zuhlke Engineering Vietnam Ltd</p>
             </div>
             <span className="text-gray-500 text-sm mt-2 md:mt-0">August 2021 — Present</span>
           </div>
           <ul className="list-disc list-outside text-gray-700 space-y-1.5 ml-4">
-            <li>Architected and implemented microservice-based solutions using Kotlin/Java, Kafka, and Postgres within a cloud-native container architecture.</li>
-            <li>Led the Customer Service Domain as Technical Lead, driving architectural decisions and ensuring high-quality deliverables.</li>
-            <li>Collaborated with Architecture teams to define solution designs and establish comprehensive testing strategies.</li>
+            <li>Worked on microservice-based solutions using Kotlin/Java, Kafka, and Postgres within a cloud-native container architecture.</li>
+            <li>Led the Customer Service Domain development, contributing to architectural decisions and deliverables.</li>
+            <li>Collaborated with Architecture teams on solution designs and testing strategies.</li>
           </ul>
         </div>
 
         <div className="p-5 bg-gray-50 rounded-lg">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-3">
             <div>
-              <h3 className="text-lg font-medium">Senior Software Engineer</h3>
+              <h3 className="text-lg font-medium">Software Engineer</h3>
               <p className="text-gray-600 mt-1">FPT Software</p>
             </div>
             <span className="text-gray-500 text-sm mt-2 md:mt-0">June 2015 — August 2021</span>
           </div>
           <ul className="list-disc list-outside text-gray-700 space-y-1.5 ml-4">
-            <li>Spearheaded Adobe Experience Manager & Adobe Analytics implementations as a Full Stack Engineer.</li>
-            <li>Designed and implemented solution architecture for port management system modernization.</li>
-            <li>Led frontend development initiatives using Angular, managing a team of developers.</li>
-            <li>Architected and maintained web application and database infrastructure on Red Hat Enterprise Linux.</li>
-            <li>Orchestrated system integration between logistics platforms, leading cross-functional development teams.</li>
-            <li>Established comprehensive development standards, including detailed design documentation and test-driven development practices.</li>
+            <li>Worked on Adobe Experience Manager & Adobe Analytics implementations as a Full Stack Engineer.</li>
+            <li>Contributed to solution architecture design for port management system modernization.</li>
+            <li>Participated in frontend development using Angular, working with a team of developers.</li>
+            <li>Maintained web application and database infrastructure on Red Hat Enterprise Linux.</li>
+            <li>Worked on system integration between logistics platforms, collaborating with cross-functional teams.</li>
+            <li>Followed established development standards, including design documentation and test-driven development practices.</li>
           </ul>
         </div>
       </div>

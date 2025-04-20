@@ -10,8 +10,8 @@ export default function Header() {
           
           <div className="text-gray-700 max-w-2xl text-justify">
             <p itemProp="description">
-              A seasoned Expert Software Engineer with extensive experience in full-stack development, specializing in Java, React, Angular, and Adobe Experience Manager. 
-              Proven track record in leading technical teams and implementing agile methodologies to drive project success and deliver high-quality software solutions.
+              A dedicated software engineer with experience in full-stack development, working with Java, React, Angular, and Adobe Experience Manager. 
+              Passionate about building quality software solutions and collaborating with teams to deliver meaningful projects.
             </p>
           </div>
         </div>
