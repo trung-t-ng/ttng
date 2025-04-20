@@ -13,25 +13,25 @@ export const metadata: Metadata = {
   publisher: "Trung Nguyen",
   robots: "index, follow",
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: '/ttng-resume-made-by-ai/favicon.svg',
+    shortcut: '/ttng-resume-made-by-ai/favicon.svg',
+    apple: '/ttng-resume-made-by-ai/favicon.svg',
     other: {
       rel: 'mask-icon',
-      url: '/favicon.svg',
+      url: '/ttng-resume-made-by-ai/favicon.svg',
     },
   },
   openGraph: {
     type: "profile",
     title: "Trung Nguyen - Expert Software Engineer",
     description: "Expert Software Engineer specializing in Java, AEM, and Digital Banking solutions",
-    images: ["/profile-image.jpg"],
+    images: ["/ttng-resume-made-by-ai/me.jpeg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Trung Nguyen - Expert Software Engineer",
     description: "Expert Software Engineer specializing in Java, AEM, and Digital Banking solutions",
-    images: ["/profile-image.jpg"],
+    images: ["/ttng-resume-made-by-ai/me.jpeg"],
   }
 };
 
