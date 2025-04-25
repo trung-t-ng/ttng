@@ -20,7 +20,7 @@ jobs:
       - name: Checkout script repository
         uses: actions/checkout@v3
         with:
-          repository: https://github.com/trung-t-nguyen/code-review-slave.git # Replace with your script repo name
+          repository: ${{ github.repository_owner }}/code-review-slave.git # Replace with your script repo name
           path: code_review_script # Local directory to clone the script repo
 
       - name: Set up Python
