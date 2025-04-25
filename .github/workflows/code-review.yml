@@ -55,5 +55,5 @@ jobs:
         run: |
           set -x
           echo "Running code review script..."
-          python code_review_script/code_review_slave.py "${{ env.DIFF }}" "${{ github.event.number }}" "${{ github.repository }}"
+          python -u code_review_script/code_review_slave.py "${{ env.DIFF }}" "${{ github.event.number }}" "${{ github.repository }}"
           echo "Code review completed"
