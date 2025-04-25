@@ -1,0 +1,56 @@
+
+name: AI Code Review (OpenAI)
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  code_review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2 # Needed to get the diff
+
+      - name: Checkout script repository
+        uses: actions/checkout@v3
+        with:
+          repository: https://github.com/trung-t-nguyen/code-review-slave.git # Replace with your script repo name
+          path: code_review_script # Local directory to clone the script repo
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies (if any in the script repo)
+        run: pip install -r code_review_script/requirements.txt # Adjust path if needed
+        run: ls code_review_script
+
+      - name: Get diff
+        run: |
+          base=$(git merge-base origin/${GITHUB_BASE_REF} HEAD)
+          diff=$(git diff $base)
+          echo "DIFF<<EOF" >> $GITHUB_ENV
+          echo "$diff" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Run AI code review script (OpenAI)
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python code_review_script/code_review_slave.py "${{ env.DIFF }}" "${{ github.event.number }}" "${{ github.repository }}"
+
+      # your_openai_code_review_script.py would contain the logic to:
+      # 1. Import the openai library
+      # 2. Authenticate with OpenAI using the API key
+      # 3. Construct the prompt as a list of messages
+      # 4. Call the openai.ChatCompletion.create() method
+      # 5. Parse the response to get the AI's review
+      # 6. Use the GitHub API (with GITHUB_TOKEN) to add comments to the PR

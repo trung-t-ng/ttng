@@ -15,7 +15,6 @@ export default function Header() {
             </p>
           </div>
         </div>
-        
         <div className="text-right text-sm flex-shrink-0">
           <div>
             <h3 className="text-gray-900 font-medium mb-1">Contact</h3>
@@ -38,10 +37,15 @@ export default function Header() {
                   LinkedIn Profile
                 </a>
               </p>
+              <p className="text-gray-600">
+                <a href="https://github.com/trung-t-nguyen" target="_blank" rel="noopener noreferrer" className="hover:text-gray-800 transition-colors">
+                  GitHub Profile
+                </a>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </header>
   );
-} 
+}
