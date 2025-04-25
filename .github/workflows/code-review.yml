@@ -40,13 +40,12 @@ jobs:
         run: |
           git fetch origin ${{ github.base_ref }}
           base=$(git merge-base origin/${{ github.base_ref }} HEAD)
-          diff=$(git diff $base)
+          git diff $base > /tmp/diff.txt
           {
-            echo "DIFF<<EOF"
-            echo "${diff}"
-            echo "EOF"
+            echo 'DIFF<<EOF'
+            cat /tmp/diff.txt
+            echo 'EOF'
           } >> $GITHUB_ENV
-          echo $diff
 
       - name: Run AI code review script (Bedrock)
         env:
