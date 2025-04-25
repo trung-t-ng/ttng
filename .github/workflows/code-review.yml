@@ -15,7 +15,8 @@ jobs:
       - name: Checkout main repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 2 # Needed to get the diff
+          fetch-depth: 0  # Fetch all history for all branches
+          ref: ${{ github.head_ref }}  # Checkout the PR branch
 
       - name: Checkout review script repository
         uses: actions/checkout@v3
@@ -37,7 +38,8 @@ jobs:
 
       - name: Get diff
         run: |
-          base=$(git merge-base origin/${GITHUB_BASE_REF} HEAD)
+          git fetch origin ${{ github.base_ref }}
+          base=$(git merge-base origin/${{ github.base_ref }} HEAD)
           diff=$(git diff $base)
           echo "DIFF<<EOF" >> $GITHUB_ENV
           echo "$diff" >> $GITHUB_ENV
