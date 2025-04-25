@@ -46,7 +46,7 @@ jobs:
             echo "$diff"
             echo 'EOF'
           } >> $GITHUB_ENV
-          echo $env.DIFF
+          echo $diff
 
       - name: Run AI code review script (Bedrock)
         env:
