@@ -41,11 +41,6 @@ jobs:
           git fetch origin ${{ github.base_ref }}
           base=$(git merge-base origin/${{ github.base_ref }} HEAD)
           git diff $base > /tmp/diff.txt
-          {
-            echo 'DIFF<<EOF'
-            cat /tmp/diff.txt
-            echo 'EOF'
-          } >> $GITHUB_ENV
 
       - name: Run AI code review script (Bedrock)
         env:
@@ -56,5 +51,5 @@ jobs:
         run: |
           set -x
           echo "Running code review script..."
-          python -u code_review_script/code_review_slave.py "${{ env.DIFF }}" "${{ github.event.number }}" "${{ github.repository }}"
+          python -u code_review_script/code_review_slave.py "/tmp/diff.txt" "${{ github.event.number }}" "${{ github.repository }}"
           echo "Code review completed"
