@@ -30,7 +30,9 @@ jobs:
 
       - name: Install dependencies (if any in the script repo)
         run: pip install -r code_review_script/requirements.txt # Adjust path if needed
-        run: ls code_review_script
+        run: |
+          pip install -r code_review_script/requirements.txt
+          ls code_review_script
 
       - name: Get diff
         run: |
