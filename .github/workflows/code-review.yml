@@ -43,7 +43,7 @@ jobs:
           diff=$(git diff $base)
           {
             echo "DIFF<<EOF"
-            echo "$diff"
+            echo "${diff}"
             echo "EOF"
           } >> $GITHUB_ENV
           echo $diff
