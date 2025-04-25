@@ -29,7 +29,6 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies (if any in the script repo)
-        run: pip install -r code_review_script/requirements.txt # Adjust path if needed
         run: |
           pip install -r code_review_script/requirements.txt
           ls code_review_script
