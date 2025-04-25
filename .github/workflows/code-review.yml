@@ -1,5 +1,5 @@
 
-name: AI Code Review (OpenAI)
+name: AI Code Review (Bedrock)
 
 on:
   pull_request:
