@@ -21,7 +21,7 @@ jobs:
       - name: Checkout review script repository
         uses: actions/checkout@v3
         with:
-          repository: ${{ github.repository_owner }}/code-review-slave.git
+          repository: ${{ github.repository_owner }}/code-review-bot.git
           ref: main # Branch to checkout
           token: ${{ secrets.GITHUB_TOKEN }}
           path: code_review_script # Local directory to clone the script repo
@@ -51,5 +51,5 @@ jobs:
         run: |
           set -x
           echo "Running code review script..."
-          python -u code_review_script/code_review_slave.py "/tmp/diff.txt" "${{ github.event.number }}" "${{ github.repository }}"
+          python -u code_review_script/code_review_bot.py "/tmp/diff.txt" "${{ github.event.number }}" "${{ github.repository }}"
           echo "Code review completed"
