@@ -1,0 +1,55 @@
+
+name: AI Code Review (Bedrock)
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  code_review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for all branches
+          ref: ${{ github.head_ref }}  # Checkout the PR branch
+
+      - name: Checkout review script repository
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ github.repository_owner }}/code-review-bot.git
+          ref: main # Branch to checkout
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: code_review_script # Local directory to clone the script repo
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies (if any in the script repo)
+        run: |
+          pip install -r code_review_script/requirements.txt
+          ls code_review_script
+
+      - name: Get diff
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          base=$(git merge-base origin/${{ github.base_ref }} HEAD)
+          git diff $base > /tmp/diff.txt
+
+      - name: Run AI code review script (Bedrock)
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -x
+          echo "Running code review script..."
+          python -u code_review_script/code_review_bot.py "/tmp/diff.txt" "${{ github.event.number }}" "${{ github.repository }}"
+          echo "Code review completed"
