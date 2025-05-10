@@ -1,10 +1,6 @@
 
 name: AI Code Review (Bedrock)
 
-# Add disabled property
-run-name: disabled
-
-
 on:
   pull_request:
     types: [opened, synchronize, reopened]
