@@ -45,6 +45,7 @@ jobs:
       - name: Run AI (Github Model - openai/gpt-4o) code review script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_MODEL_PAT_TOKEN: ${{ secrets.AI_MODEL_PAT_TOKEN }}
         shell: bash
         run: |
           set -x
